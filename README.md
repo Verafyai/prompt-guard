@@ -4,6 +4,8 @@
 
 <p align="center">No model reads a naked prompt.<br>An open filter that sits in front of AI jurors and compiles untrusted text before any model sees it.</p>
 
+<p align="center"><img src="assets/explainer.gif" width="720" alt="Animation: a hidden instruction in a claimant's statement makes every juror vote YES; with Prompt Guard the text is normalized, scanned, compiled into statements and a quoted directive, and the jury votes NO on the facts. An illustration."></p>
+
 ---
 
 ## Why this exists
