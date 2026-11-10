@@ -59,7 +59,7 @@ All numbers are measured with `node bench/run.mjs` on public datasets and on our
 | BIPIA, indirect | 150 attack instructions planted in real emails | **0.7%** | 0.0% on 100 clean emails |
 | Our evidence suite | 30 jury-directed payloads in dispute evidence, 60 benign documents | 93.3% plain | 0.0% |
 
-Obfuscation is where normalization earns its place. On our suite, the same rules run on raw text catch 0% of payloads hidden with zero-width characters, fullwidth letters, base64 or Unicode tag characters, and 10% of look-alike letters. With normalization the guard catches 93.3% to 100% under every one of those. A filter that only looks for "ignore previous instructions" catches 1.5% of deepset and 15.6% of Gandalf.
+Obfuscation is where normalization earns its place. On our suite, the same rules run on raw text catch 0% of payloads hidden with zero-width characters, fullwidth letters, base64 or Unicode tag characters, and 10% of look-alike letters. With normalization the guard catches 93.3% to 100% under every one of those. A filter that only looks for "ignore previous instructions" catches none of the held out deepset injections and 15.6% of Gandalf.
 
 Compiling costs about 0.6 ms per kilobyte on one CPU core and no model calls.
 
@@ -67,7 +67,7 @@ Compiling costs about 0.6 ms per kilobyte on one CPU core and no model calls.
 
 ## Try to break it
 
-`redteam/` is a standing adversarial test. Every attack anyone contributes runs inside ordinary evidence, under eight obfuscations, on every pull request.
+`redteam/` is a standing adversarial test. Every attack anyone contributes runs inside ordinary evidence, as written and under seven obfuscations, on every pull request.
 
 ```
 node redteam/run.mjs            # the scoreboard: which attacks get through, and how
@@ -111,6 +111,6 @@ SPEC.md     the record format and algorithms, version prompt-guard/1
 
 ## Status
 
-A research prototype from Verafy, used in front of the jurors in Verafy Harness. Not audited. It is one layer: the jury design (several model families, commit and reveal, an agreement bar, a challenge window) is the rest of the defense, and a guard that catches everything a lexical rule can see still misses everything it cannot.
+A research prototype from Verafy, being added in front of the jurors in Verafy Harness ([pull request](https://github.com/Verafyai/verafyHarness/pull/66)). Not audited. It is one layer: the jury design (several model families, commit and reveal, an agreement bar, a challenge window) is the rest of the defense, and a guard that catches everything a lexical rule can see still misses everything it cannot.
 
 MIT licensed. The datasets are fetched from their sources and not redistributed: deepset/prompt-injections (Apache-2.0), Lakera/gandalf_ignore_instructions (MIT), microsoft/BIPIA (MIT).
