@@ -1,0 +1,18 @@
+{
+  "name": "@verafyai/prompt-guard",
+  "version": "0.1.0",
+  "description": "No model reads a naked prompt: compile untrusted text into quoted statements and directives before an AI juror sees it.",
+  "type": "module",
+  "exports": { ".": "./src/index.js" },
+  "files": ["src", "SPEC.md", "README.md", "LICENSE", "assets/logo.svg"],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "bench": "node bench/run.mjs",
+    "redteam": "node redteam/run.mjs --strict",
+    "redteam:jury": "node redteam/jury.mjs"
+  },
+  "engines": { "node": ">=22" },
+  "keywords": ["prompt injection", "llm security", "ai jury", "guardrails", "consensus"],
+  "repository": { "type": "git", "url": "https://github.com/Verafyai/prompt-guard" },
+  "license": "MIT"
+}

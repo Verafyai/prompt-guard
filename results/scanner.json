@@ -1,0 +1,173 @@
+{
+  "version": "prompt-guard/1",
+  "measuredAt": "2026-11-10T16:29:04.950Z",
+  "label": "measured",
+  "node": "v22.23.4",
+  "sets": {
+    "deepset-train": {
+      "source": "deepset/prompt-injections train split (Apache-2.0); rules revised after reading its misses",
+      "injections": 203,
+      "benign": 343,
+      "guard": {
+        "detected": 0.5369458128078818,
+        "falseAlarms": 0.0029154518950437317
+      },
+      "raw rules": {
+        "detected": 0.5369458128078818,
+        "falseAlarms": 0.0029154518950437317
+      },
+      "one phrase": {
+        "detected": 0.019704433497536946,
+        "falseAlarms": 0
+      }
+    },
+    "deepset-test": {
+      "source": "deepset/prompt-injections test split (Apache-2.0); held out",
+      "injections": 60,
+      "benign": 56,
+      "guard": {
+        "detected": 0.45,
+        "falseAlarms": 0
+      },
+      "raw rules": {
+        "detected": 0.45,
+        "falseAlarms": 0
+      },
+      "one phrase": {
+        "detected": 0,
+        "falseAlarms": 0
+      }
+    },
+    "gandalf": {
+      "source": "Lakera/gandalf_ignore_instructions (MIT)",
+      "injections": 777,
+      "guard": {
+        "detected": 0.6718146718146718,
+        "falseAlarms": null
+      },
+      "raw rules": {
+        "detected": 0.6718146718146718,
+        "falseAlarms": null
+      },
+      "one phrase": {
+        "detected": 0.15572715572715573,
+        "falseAlarms": null
+      }
+    },
+    "bipia": {
+      "source": "microsoft/BIPIA text attacks in BIPIA emails (MIT)",
+      "injections": 150,
+      "benign": 100,
+      "guard": {
+        "detected": 0.006666666666666667,
+        "falseAlarms": 0
+      },
+      "raw rules": {
+        "detected": 0.006666666666666667,
+        "falseAlarms": 0
+      },
+      "one phrase": {
+        "detected": 0,
+        "falseAlarms": 0
+      },
+      "byCategory": {
+        "Information Retrieval": 0,
+        "Content Creation": 0,
+        "Learning and Tutoring": 0,
+        "Language Translation": 0,
+        "Programming Help": 0,
+        "Alphanumeric Substitution": 0,
+        "Homophonic Substitution": 0,
+        "Misspelling Intentionally": 0,
+        "Anagramming": 0,
+        "Space Removal & Grouping": 0,
+        "Instruction": 0.2,
+        "Social Interaction": 0,
+        "Persuasion": 0,
+        "Clickbait": 0,
+        "Malware Distribution": 0,
+        "Task Automation": 0,
+        "Business Intelligence": 0,
+        "Conversational Agent": 0,
+        "Research Assistance": 0,
+        "Sentiment Analysis": 0,
+        "Substitution Ciphers": 0,
+        "Base Encoding": 0,
+        "Reverse Text": 0,
+        "Emoji Substitution": 0,
+        "Information Dissemination": 0,
+        "Marketing & Advertising": 0,
+        "Entertainment": 0,
+        "Scams & Fraud": 0,
+        "Misinformation & Propaganda": 0
+      }
+    },
+    "evidence": {
+      "source": "evidence suite (bench/suite.mjs), written by the same people as the rules",
+      "attacks": 30,
+      "benign": 60,
+      "falseAlarms": {
+        "guard": 0,
+        "raw rules": 0,
+        "one phrase": 0
+      },
+      "byTransform": {
+        "plain": {
+          "n": 60,
+          "guard": 0.9333333333333333,
+          "raw rules": 0.9333333333333333,
+          "one phrase": 0.03333333333333333
+        },
+        "zero-width": {
+          "n": 60,
+          "guard": 0.9333333333333333,
+          "raw rules": 0,
+          "one phrase": 0
+        },
+        "lookalike": {
+          "n": 60,
+          "guard": 0.9333333333333333,
+          "raw rules": 0.1,
+          "one phrase": 0
+        },
+        "fullwidth": {
+          "n": 60,
+          "guard": 0.9333333333333333,
+          "raw rules": 0,
+          "one phrase": 0
+        },
+        "base64": {
+          "n": 60,
+          "guard": 0.9333333333333333,
+          "raw rules": 0,
+          "one phrase": 0
+        },
+        "tag-characters": {
+          "n": 60,
+          "guard": 1,
+          "raw rules": 0,
+          "one phrase": 0
+        },
+        "html-comment": {
+          "n": 60,
+          "guard": 1,
+          "raw rules": 0.9333333333333333,
+          "one phrase": 0.03333333333333333
+        },
+        "hidden-span": {
+          "n": 60,
+          "guard": 1,
+          "raw rules": 0.9333333333333333,
+          "one phrase": 0.03333333333333333
+        }
+      }
+    }
+  },
+  "cost": {
+    "texts": 1749,
+    "kilobytes": 269.9,
+    "msPerKilobyte": 0.479,
+    "msTotal": 129.3,
+    "modelCalls": 0
+  }
+}
