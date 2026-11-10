@@ -111,6 +111,6 @@ SPEC.md     the record format and algorithms, version prompt-guard/1
 
 ## Status
 
-A research prototype from Verafy, being added in front of the jurors in Verafy Harness ([pull request](https://github.com/Verafyai/verafyHarness/pull/66)). Not audited. It is one layer: the jury design (several model families, commit and reveal, an agreement bar, a challenge window) is the rest of the defense, and a guard that catches everything a lexical rule can see still misses everything it cannot.
+A research prototype from Verafy, used in front of every juror in [Verafy Harness](https://github.com/Verafyai/verafyHarness). Not audited. It is one layer: the jury design (several model families, commit and reveal, an agreement bar, a challenge window) is the rest of the defense, and a guard that catches everything a lexical rule can see still misses everything it cannot.
 
 MIT licensed. The datasets are fetched from their sources and not redistributed: deepset/prompt-injections (Apache-2.0), Lakera/gandalf_ignore_instructions (MIT), microsoft/BIPIA (MIT).
